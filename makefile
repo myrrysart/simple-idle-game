@@ -1,12 +1,25 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                              _  __    __     #
+#    makefile                                                 /_\/ / /\ \ \    #
+#                                                            //_\\ \/  \/ /    #
+#    By: artwizard <hello@myrrys.art>                       /  _  \  /\  /     #
+#                                                           \_/ \_/\/  \/      #
+#    Created: 2024/08/01 01:39:07 by artwizard                                 #
+#    Updated: 2024/08/01 01:39:16 by artwizard                 myrrys.art      #
+#                                                                              #
+# **************************************************************************** #
+
+RAYGUI_PATH = /home/art/projektit/libraries/raygui/src
 CC = gcc
 CFLAGS = -Wall -Wextra -std=c99 -D_DEFAULT_SOURCE -Wno-missing-braces -Wno-unused-parameter
-INCLUDES = -I/home/art/projektit/libraries/raylib/src
+INCLUDES = -I/home/art/projektit/libraries/raylib/src -I$(RAYGUI_PATH)
 LDFLAGS = -L/home/art/projektit/libraries/raylib/src
 LDLIBS = -lraylib -lGL -lm -lpthread -ldl -lrt -lX11
 
 WCC = emcc
 WCFLAGS = -s USE_GLFW=3 -s WASM=1 -s ASYNCIFY -Os -Wall -Wno-unused-parameter
-WINCLUDES = -I/home/art/projektit/libraries/raylib/src
+WINCLUDES = -I/home/art/projektit/libraries/raylib/src -I$(RAYGUI_PATH)
 WLDFLAGS = -s USE_GLFW=3 -s WASM=1 -s ASYNCIFY -s ALLOW_MEMORY_GROWTH=1 -s TOTAL_MEMORY=67108864
 WLDLIBS = /home/art/projektit/libraries/raylib/src/libraylib.a
 WSHELL = --shell-file shell.html
