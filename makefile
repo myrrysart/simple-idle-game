@@ -13,8 +13,10 @@ WSHELL = --shell-file shell.html
 
 SRC = main.c
 OBJ = $(SRC:.c=.o)
-EXEC = mygame
+EXEC = simpleidle
 WEXEC = index.html
+WJS = index.js
+WASM = index.wasm
 
 all: $(EXEC)
 
@@ -27,5 +29,5 @@ $(EXEC): $(OBJ)
 	$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
 
 clean:
-	rm -f $(OBJ) $(EXEC) $(WEXEC)
+	rm -f $(OBJ) $(EXEC) $(WEXEC) $(WJS) $(WASM)
 
