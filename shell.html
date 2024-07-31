@@ -1,0 +1,33 @@
+<!-- *********************************************************************** -->
+<!--                                                                         -->
+<!--                                                           _  __    __   -->
+<!-- shell.html                                               /_\/ / /\ \ \  -->
+<!--                                                         //_\\ \/  \/ /  -->
+<!-- By: artwizard <hello@myrrys.art>                       /  _  \  /\  /   -->
+<!--                                                        \_/ \_/\/  \/    -->
+<!-- Created: 2024/08/01 00:22:39 by artwizard                               -->
+<!-- Updated: 2024/08/01 00:31:24 by artwizard                 myrrys.art    -->
+<!--                                                                         -->
+<!-- *********************************************************************** -->
+
+<!doctype html>
+<html lang="en-us">
+	<head>
+		<meta charset ="utf-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Simple Idle Clicker</title>
+		<style>
+			body {margin: 0; background-color: black;}
+			canvas {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+		</style>
+	</head>
+	<body>
+		<canvas id="canvas" oncontextmenu="event.preventDefault()"></canvas>
+		<script type='text/javascript'>
+			var Module = {
+				canvas: (function() { return document.getElementById('canvas'); })()
+			};
+		</script>
+		{{{ SCRIPT }}}
+	</body>
+</html>
